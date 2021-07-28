@@ -50,37 +50,37 @@ class ElasticsearchApplicationTests {
     @Test
     void contextLoads() throws IOException {
 
-        initIndex(TeacherElasticSearchIndex.class);
-//        initIndex(ResouceCampusElasticSearchIndex.class);
-//        initIndex(ResouceCampusLocationElasticSearchIndex.class);
-//        initIndex(CmsTeacherShowColumnElasticSearchIndex.class);
-//        initIndex(ProductInternationSubjectRelationElasticSearchIndex.class);
-//        initIndex(ProductInternationLabelRelationElasticSearchIndex.class);
-//        initIndex(ProductInternationSubjectLabelElasticSearchIndex.class);
-//        initIndex(ESCourseCampus.class);
-//        initIndex(CmsTeacherElasticSearchIndex.class);
-//
-//        initIndex(CourseClassInfoElasticSearchIndex.class);
-//
-//        initIndex(ProductSkuElasticSearchIndex.class);
-//        initIndex(CourseElasticSearchIndex.class);
-//        initIndex(CmsTeacherGradeElasticSearchIndex.class);
-//
-//        initIndex(CmsTeacherLabelRelationElasticSearchIndex.class);
-//        initIndex(TeacherGradeElasticSearchIndex.class);
-//        initIndex(CourseTypeElasticSearchIndex.class);
-//
-//        initIndex(DictElasticSearchIndex.class);
-//        initIndex(ESRelation.class);
-//        initIndex(ESTeacherSubject.class);
-//
-//        initIndex(ProductSpu.class);
-//        initIndex(ProductSpuStyleElasticSearchIndex.class);
-//        initIndex(CourseGradeElasticSearchIndex.class);
-//
-//        initIndex(CoursePeriodPriceElasticSearchIndex.class);
-//        initIndex(CoursePeriodInfoElasticSearchIndex.class);
-//        initIndex(CourseClassPeriodInfoElasticSearchIndex.class);
+//        initIndex(TeacherElasticSearchIndex.class);
+        initIndex(ResouceCampusElasticSearchIndex.class);
+        initIndex(ResouceCampusLocationElasticSearchIndex.class);
+        initIndex(CmsTeacherShowColumnElasticSearchIndex.class);
+        initIndex(ProductInternationSubjectRelationElasticSearchIndex.class);
+        initIndex(ProductInternationLabelRelationElasticSearchIndex.class);
+        initIndex(ProductInternationSubjectLabelElasticSearchIndex.class);
+        initIndex(ESCourseCampus.class);
+        initIndex(CmsTeacherElasticSearchIndex.class);
+
+        initIndex(CourseClassInfoElasticSearchIndex.class);
+
+        initIndex(ProductSkuElasticSearchIndex.class);
+        initIndex(CourseElasticSearchIndex.class);
+        initIndex(CmsTeacherGradeElasticSearchIndex.class);
+
+        initIndex(CmsTeacherLabelRelationElasticSearchIndex.class);
+        initIndex(TeacherGradeElasticSearchIndex.class);
+        initIndex(CourseTypeElasticSearchIndex.class);
+
+        initIndex(DictElasticSearchIndex.class);
+        initIndex(ESRelation.class);
+        initIndex(ESTeacherSubject.class);
+
+        initIndex(ProductSpu.class);
+        initIndex(ProductSpuStyleElasticSearchIndex.class);
+        initIndex(CourseGradeElasticSearchIndex.class);
+
+        initIndex(CoursePeriodPriceElasticSearchIndex.class);
+        initIndex(CoursePeriodInfoElasticSearchIndex.class);
+        initIndex(CourseClassPeriodInfoElasticSearchIndex.class);
 
     }
 

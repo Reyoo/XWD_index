@@ -24,24 +24,24 @@ public class RestClientConfig extends AbstractElasticsearchConfiguration {
 
 //          uat
 //        final ClientConfiguration clientConfiguration = ClientConfiguration.builder()
-//                .connectedTo("124.70.94.194:9200")
+//                .connectedTo("")
 //                .build();
 
-        final ClientConfiguration clientConfiguration = ClientConfiguration.builder()
-                .connectedTo("119.3.248.85:9200")
-                .build();
+//        final ClientConfiguration clientConfiguration = ClientConfiguration.builder()
+//                .connectedTo("")
+//                .build();
 
 //pre
 //        final ClientConfiguration clientConfiguration = ClientConfiguration.builder()
-//                .connectedTo("124.70.25.232:9200")
+//                .connectedTo("")
 //                .build();
 
 
 
 //prod
-//        final ClientConfiguration clientConfiguration = ClientConfiguration.builder()
-//                .connectedTo("121.36.38.122:9200")
-//                .build();
+        final ClientConfiguration clientConfiguration = ClientConfiguration.builder()
+                .connectedTo("")
+                .build();
 
 
         return RestClients.create(clientConfiguration).rest();
