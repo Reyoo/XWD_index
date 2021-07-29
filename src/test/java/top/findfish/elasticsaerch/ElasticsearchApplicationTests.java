@@ -50,37 +50,38 @@ class ElasticsearchApplicationTests {
     @Test
     void contextLoads() throws IOException {
 
+        initIndex(CourseSubjectElasticSearchIndex.class);
 //        initIndex(TeacherElasticSearchIndex.class);
-        initIndex(ResouceCampusElasticSearchIndex.class);
-        initIndex(ResouceCampusLocationElasticSearchIndex.class);
-        initIndex(CmsTeacherShowColumnElasticSearchIndex.class);
-        initIndex(ProductInternationSubjectRelationElasticSearchIndex.class);
-        initIndex(ProductInternationLabelRelationElasticSearchIndex.class);
-        initIndex(ProductInternationSubjectLabelElasticSearchIndex.class);
-        initIndex(ESCourseCampus.class);
-        initIndex(CmsTeacherElasticSearchIndex.class);
-
-        initIndex(CourseClassInfoElasticSearchIndex.class);
-
-        initIndex(ProductSkuElasticSearchIndex.class);
-        initIndex(CourseElasticSearchIndex.class);
-        initIndex(CmsTeacherGradeElasticSearchIndex.class);
-
-        initIndex(CmsTeacherLabelRelationElasticSearchIndex.class);
-        initIndex(TeacherGradeElasticSearchIndex.class);
-        initIndex(CourseTypeElasticSearchIndex.class);
-
-        initIndex(DictElasticSearchIndex.class);
-        initIndex(ESRelation.class);
-        initIndex(ESTeacherSubject.class);
-
-        initIndex(ProductSpu.class);
-        initIndex(ProductSpuStyleElasticSearchIndex.class);
-        initIndex(CourseGradeElasticSearchIndex.class);
-
-        initIndex(CoursePeriodPriceElasticSearchIndex.class);
-        initIndex(CoursePeriodInfoElasticSearchIndex.class);
-        initIndex(CourseClassPeriodInfoElasticSearchIndex.class);
+//        initIndex(ResouceCampusElasticSearchIndex.class);
+//        initIndex(ResouceCampusLocationElasticSearchIndex.class);
+//        initIndex(CmsTeacherShowColumnElasticSearchIndex.class);
+//        initIndex(ProductInternationSubjectRelationElasticSearchIndex.class);
+//        initIndex(ProductInternationLabelRelationElasticSearchIndex.class);
+//        initIndex(ProductInternationSubjectLabelElasticSearchIndex.class);
+//        initIndex(ESCourseCampus.class);
+//        initIndex(CmsTeacherElasticSearchIndex.class);
+//
+//        initIndex(CourseClassInfoElasticSearchIndex.class);
+//
+//        initIndex(ProductSkuElasticSearchIndex.class);
+//        initIndex(CourseElasticSearchIndex.class);
+//        initIndex(CmsTeacherGradeElasticSearchIndex.class);
+//
+//        initIndex(CmsTeacherLabelRelationElasticSearchIndex.class);
+//        initIndex(TeacherGradeElasticSearchIndex.class);
+//        initIndex(CourseTypeElasticSearchIndex.class);
+//
+//        initIndex(DictElasticSearchIndex.class);
+//        initIndex(ESRelation.class);
+//        initIndex(ESTeacherSubject.class);
+//
+//        initIndex(ProductSpu.class);
+//        initIndex(ProductSpuStyleElasticSearchIndex.class);
+//        initIndex(CourseGradeElasticSearchIndex.class);
+//
+//        initIndex(CoursePeriodPriceElasticSearchIndex.class);
+//        initIndex(CoursePeriodInfoElasticSearchIndex.class);
+//        initIndex(CourseClassPeriodInfoElasticSearchIndex.class);
 
     }
 
@@ -125,9 +126,9 @@ class ElasticsearchApplicationTests {
 //        System.out.println(searchResponse.getHits().getHits().length);
 
 
-        SearchRequest searchRequest = new SearchRequest("teacher");
+        SearchRequest searchRequest = new SearchRequest("teacher_table");
         SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
-        searchSourceBuilder.query(QueryBuilders.termQuery("user_name", "桂鸣涧"));
+        searchSourceBuilder.query(QueryBuilders.termQuery("teacherName", "李小白"));
         searchRequest.source(searchSourceBuilder);
         SearchResponse searchResponse = highLevelClient.search(searchRequest, RequestOptions.DEFAULT);
         System.out.println(searchResponse.getHits().getHits().length);
@@ -209,7 +210,7 @@ class ElasticsearchApplicationTests {
 
         SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
         searchSourceBuilder.from(0);
-        searchSourceBuilder.size(9999);
+        searchSourceBuilder.size(10000);
         BoolQueryBuilder boolBuilder = QueryBuilders.boolQuery();
 //        boolBuilder.must(matchPhrasePrefixQueryBuilder);
         boolBuilder.must(matchQueryBuilder);
